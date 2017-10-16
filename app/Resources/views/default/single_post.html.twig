@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+        <div class="container wrapper">
+            <div class="single_post">
+                <h1>{{blog.title}}</h1>
+                <div class="post_image" style="background-image:url('/uploads/{{blog.src}}')">
+                    <div class="edit_post"><a href="/edit/{{blog.url}}">Edit post</a></div>
+                </div>
+                <div class="post_text">{{blog.text}}</div>    
+
+            </div>           
+        </div>
+        <div class="container comment_container">
+            <div class="comments">
+                <p class="comments_count">{{comments|length}} comments: </p>
+                
+                {% for comment in comments %}
+                    <div class="comment">
+                        <p class="comment_date">{{comment.createdDate|date('Y-m-d')}}</p>
+                        <p>{{comment.text}}</p>
+                    </div>    
+                {% else %}
+                    No comments have been found.
+                {% endfor %}    
+
+
+
+                {% for message in app.flashes('success') %}
+                    <div class="alert alert-success">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+                {{ form_start(form) }}
+                    {{ form_errors(form) }} 
+                    {% for inp in form %}
+                            <div class="form-group">
+                                    {{ form_label(inp) }}
+                                    {{ form_widget(inp) }}
+                            </div>
+                    {% endfor %}
+                {{ form_end(form) }}       
+             </div>                     
+        </div>         
+{% endblock %}

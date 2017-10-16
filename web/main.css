@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: hsl(0,0%,20%);
+    font-family: 'Amatic SC',sans-serif;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.clr{
+    clear: both;
+}
+textarea {
+    resize: vertical; /* user can resize vertically, but width is fixed */
+}
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+.wrapper{
+    border: 3px solid hsl(0,0%,20%);
+    padding: 20px 0;
+}
+.single_post{
+    padding: 0 20px;
+}
+header{
+    padding: 20px 0 0;
+}
+header h1, header h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+header h1{
+}
+header h1 a{
+    font-size:30px;
+}
+header h2{
+    font-size:18px;
+}
+nav{
+}
+nav li{
+    display: inline-block;
+    margin-right: 10px;
+}
+nav li a{
+
+}
+.post{
+    margin-bottom: 20px;
+    padding: 20px 30px;
+    border: 3px solid hsl(0,0%,20%);
+}
+.post h3{
+    margin-bottom:20px;
+}
+.post h3 a{
+    font-size:34px;
+}
+.post_date{
+    font-size:18px;
+    margin-bottom:20px;
+}
+.post_text{
+    margin-bottom:20px;
+}
+.post_footer{
+
+}
+.read_more{
+    float: right;
+}
+.read_more a{
+    text-decoration: underline;
+}
+.add_post{
+}
+.form-group{
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.form-group label{
+    display: block;
+    margin-bottom:10px;
+}
+.form-group input[type="text"],.form-group textarea{
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border:none;
+    border-bottom: 1px solid hsl(0,0%,20%);
+    outline: none;
+}
+.submit_button{
+    padding: 10px;
+    border: none;
+    background: #fff;
+    border: 1px solid #000;
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+    font-size: 18px;
+    color: #000;
+    cursor: pointer;
+}
+.submit_button:hover{
+    color: #fff;
+    background: #000;
+}
+.alert{
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.alert-success {
+    border: 1px solid green;
+    color: green;
+}
+.alert.alert-error {
+    border: 1px solid red;
+    color: red;
+}
+.single_post h1{
+    font-size:34px;
+    margin-bottom:20px;
+    text-align: center;
+}
+.post_image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 20px;
+    max-height: 400px;
+    min-height: 200px;
+    position: relative;
+}
+.edit_post{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+}
+.edit_post a{
+    text-align: center;
+    display: block;
+    padding: 10px;
+    min-width: 100px;
+    background: rgba(255,255,255,0.5);
+    color: #000;
+}
+.edit_post a:hover{
+    background: #000;
+    color: #fff;
+}
+.post_image img{
+    width: 100%;
+}
+.post_text{
+    margin-bottom:20px;
+}
+.comment_container{
+    padding: 20px 0;
+    border: 3px solid hsl(0,0%,20%);
+}
+.comments{
+    padding: 0 20px;
+}
+.comments_count{
+    margin-bottom:20px;
+    font-size:18px;
+}
+.comment{
+    margin-bottom:20px;
+    padding: 10px;
+    -webkit-box-shadow: 0px 0px 1px 0px rgba(194,194,194,1);
+    -moz-box-shadow: 0px 0px 1px 0px rgba(194,194,194,1);
+    box-shadow: 0px 0px 1px 0px rgba(194,194,194,1);
+}
+.comment_date{
+    margin-bottom:10px;
+}
+.container form{
+    padding:0 20px;
+}
+.form-group:last-child{
+    display: none;
+}

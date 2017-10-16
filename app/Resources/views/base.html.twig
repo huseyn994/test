@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+       
+        <link rel="icon" type="image/x-icon"  href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="/main.css">
+        
+        {% block stylesheet %}{% endblock %}
+    </head>
+    <body>
+
+        <header>
+            <h1><a href="/">Simple test blog</a></h1>
+            <h2>Motivator, Trainer, Social media manager, Blogger</h2>
+            <nav class="container">
+                <ul>
+                    <li><a href="/">Home page</a></li>
+                    <li><a href="/post/add">Add blog</a></li>
+                </ul>
+            </nav>
+        </header>
+        {% block body %}{% endblock %}
+    </body>
+</html>

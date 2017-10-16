@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container">
+        {% block posts %}
+            {% for blog in blogs %}
+                <div class="post">
+                    <h3><a href="/posts/{{blog.url}}">{{blog.title}}</a></h3>
+                    <div class="post_text">
+                        {{blog.text}}
+                    </div>
+                    <div class="post_footer">
+                        <div class="post_social_network"></div>
+                        <div class="read_more"><a href="/posts/{{blog.url}}">Read more</a></div>
+                        <div class="clr"></div>
+                    </div>
+                </div>
+            {% else %}
+                No posts have been found.
+            {% endfor %}    
+        {% endblock %}
+    </div>
+{% endblock %}

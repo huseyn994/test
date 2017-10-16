@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+        <div class="container wrapper">
+
+
+            {{ form_start(form) }}
+                {% for type, messages in app.session.flashbag.all() %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{type}}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}    
+                {% endfor %} 
+
+                {% for inp in form %}
+                        <div class="form-group">
+                                {{ form_label(inp) }}
+                                {{ form_widget(inp) }}
+                        </div>
+                {% endfor %}
+
+
+            {{ form_end(form) }}
+        </div>
+{% endblock %}
